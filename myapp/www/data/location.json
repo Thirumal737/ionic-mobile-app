@@ -1,0 +1,11 @@
+{
+  "locations":[
+    {
+      "id":1,
+      "location":"Project site"
+    },
+    {"id":2,
+    "location":"Store"
+    }    
+  ]
+}

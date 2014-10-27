@@ -1,0 +1,20 @@
+{
+  "stocks":[
+    {
+      "Stock":"Machine DM500",
+      "Location":"Project site"
+    },
+    {
+      "Stock":"Crawler Machine DM505",
+      "Location":"store"
+    },
+    {
+    	"Stock":"Marina Machine PM008",
+      "Location":"store"
+    },
+    {
+    	"Stock":"Machine TH9876",
+      "Location":"Project site" 
+    }
+    ]
+  }

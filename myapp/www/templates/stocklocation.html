@@ -1,0 +1,32 @@
+<ion-view title="Stock Location">
+  <ion-content class="padding">
+   <div class="list">
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Location
+    </div>
+    <select ng-model="search.location">
+     <option value="">Please Select</option>
+      <option ng-repeat="loc in baseData.locations" value="{{loc.id}}">{{loc.location}}</option>
+    </select>
+  </label>
+  </div>
+  <div class="padding">
+  <button class="button button-block button-positive" ng-click="submitFilter()">Submit</button>
+</div> 
+<div class="item-text-wrap notificationCard">
+<div class="item" ng-repeat="stock in allstock" ng-if="showStock">
+    <div class="item-divider line-item-header item-text-wrap">
+      {{stock["Stock"]}}
+    </div>                           
+    <div class="row" ng-repeat="(key,value) in stock">
+      <div class="col col-50 col-center line_item">
+        <b>{{key}}</b>	           	
+      </div>
+      <div class="col col-50 col-center line_item">
+        {{value}}
+      </div>
+    </div> 
+    </div>
+  </ion-content>
+</ion-view>

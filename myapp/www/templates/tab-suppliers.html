@@ -1,0 +1,9 @@
+<ion-view title="Suppliers">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="supplier in suppliers" type="item-text-wrap" href="#/tab/supplier/{{supplier.id}}">
+        {{supplier.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
