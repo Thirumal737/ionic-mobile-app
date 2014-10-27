@@ -1,21 +1,21 @@
 <ion-view title="Stock Location">
-  <ion-content class="padding">
-   <div class="list">
+<ion-content class="padding">
+<div class="list">
   <label class="item item-input item-select">
     <div class="input-label">
       Location
     </div>
     <select ng-model="search.location">
      <option value="">Please Select</option>
-      <option ng-repeat="loc in baseData.locations" value="{{loc.id}}">{{loc.location}}</option>
-    </select>
-  </label>
-  </div>
-  <div class="padding">
+     <option ng-repeat="loc in baseData.locations" value="{{loc.location}}">{{loc.location}}</option>
+   </select>
+ </label>
+</div>
+<div class="padding">
   <button class="button button-block button-positive" ng-click="submitFilter()">Submit</button>
 </div> 
 <div class="item-text-wrap notificationCard">
-<div class="item" ng-repeat="stock in allstock" ng-if="showStock">
+  <div class="item" ng-repeat="stock in allstock | filter:search.location" ng-if="showStock">
     <div class="item-divider line-item-header item-text-wrap">
       {{stock["Stock"]}}
     </div>                           
@@ -27,6 +27,6 @@
         {{value}}
       </div>
     </div> 
-    </div>
-  </ion-content>
+  </div>
+</ion-content>
 </ion-view>
